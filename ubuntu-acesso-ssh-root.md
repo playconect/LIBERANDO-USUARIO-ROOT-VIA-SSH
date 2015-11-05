@@ -1,6 +1,16 @@
 #### LIBERANDO O USUÁRIO ROOT PARA ACESSO REMOTO VIA SSH
 
-Configurando uma máquina linux para liberar acesso remoto via ssh para o usuário root no Conectiva Linux 10. 
+Configurando uma máquina linux para liberar acesso remoto via ssh para o usuário root.
+
+**Instalar openssh-server**   
+```shell
+apt-get install openssh-server
+```   
+
+**Configurar senha para o root**   
+```shell
+sudo passwd root
+```   
 
 Edite o seguinte arquivo: **/etc/ssh/sshd_config**   
 
@@ -15,7 +25,6 @@ PermitRootLogin yes
 
 **Agora reinicie o serviço de ssh:***
 ```shell
-service sshd stop
-service sshd start 
+/etc/init.d/ssh restart
 ```   
 
