@@ -19,5 +19,8 @@ PermitRootLogin no
 ```shell
 PermitRootLogin yes
 ```
-**Agora reinicie o serviço de ssh: /etc/init.d/ssh restart**
+**Agora reinicie o serviço de ssh:** 
+```shell
+/etc/init.d/ssh restart**
+```
 
